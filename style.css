@@ -1,0 +1,975 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@500;600&family=Epilogue:wght@500;700&family=Great+Vibes&family=Inter:wght@300;400&family=Kumbh+Sans:wght@400;700&family=Montserrat:wght@300;400&family=Mukta:wght@300;400;500;700&family=Nixie+One&family=Nunito:wght@200;300;600;700&family=Open+Sans:wght@400;600;700&family=Playfair+Display:wght@400;500;600;700&family=Poppins:wght@700&family=Raleway:wght@400;700&family=Roboto+Flex:opsz,wght@8..144,300;8..144,400&display=swap');
+
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: Kumbh Sans;
+}
+
+html {
+    font-size: 16px;
+}
+
+body{
+    min-height: 100vh; /* I am not sure it´s needed, works without it too*/
+    display: flex;
+    flex-direction: column;
+}
+
+
+/************************ START NAVBAR ************************/
+.navbar {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    padding: 2rem 0;
+}
+
+.logo-container {
+    width: 10%;
+    height: auto;
+    align-self: center;
+    margin-left: 6.5rem;
+}
+
+.logo-img {
+    width: 100%;
+    height: auto;
+}
+
+.navlinks { /*contains the navmenu text*/
+    display: flex;
+    width: 50%;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.navlinks li, .navlinks li a {
+    list-style: none;
+    text-decoration: none;
+}
+
+.navlinks li:hover{
+    border-bottom: hsl(26, 100%, 55%) 4px solid;
+}
+
+.nav-icons-container { /*shopping cart icon and profile image*/
+    width: 25%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding-left: 12rem;
+    margin-right: 5rem;
+}
+
+.navlinks li a {
+    color: hsl(219, 9%, 45%);
+    font-weight: 300;
+}
+
+.close-bar {
+    display: none;
+}
+
+.profile-img-wrapper {
+    width: 60%;
+    height: auto;
+    margin-left: 1rem;
+}
+
+.profile-img-wrapper img {
+    width: 3.5rem;
+    height: auto;
+}
+
+.profile-img-wrapper img:hover {
+    border: solid 2px hsl(26, 100%, 55%);
+    border-radius: 50%;
+}
+
+hr {
+    width: 85%;
+    margin: auto;
+    margin-bottom: 3rem;
+}
+
+/*** Start shopping cart section in Navbar ***/
+
+.cart {
+    display: flex;
+    flex-direction: column;
+}
+
+.icon-cart-qty { /*the number which appears above the cart, when we have an item in the cart*/
+    border-radius: 50%;
+    padding: .07rem;
+    background-color: hsl(26, 100%, 55%);
+    color: #fff;
+    font-size: .85rem;
+    align-self: flex-end;
+}
+
+.cart-control-icon img {
+    width: 2rem;
+}
+
+/*** End shopping cart section in Navbar ***/
+/************************ END NAVBAR ************************/
+
+/************************ START MAIN CONTAINER ************************/
+
+.wrapper {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+}
+
+/************************ END MAIN CONTAINER ************************/
+
+
+/************************ START CONTAINER FOR IMAGES - first container ************************/
+
+.product-img-container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    width: 40%;
+    margin-right: 5rem;
+}
+
+.container-img-main { /*needed to shift the main image to the right*/
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 1rem;
+}
+
+ div img.main-img {
+    width: 80%;
+    height: auto;
+    border-radius: 1.5rem;
+}
+.main-img {
+    width: 100%;
+    height: auto;
+}
+
+.container-img-thumbnails img {
+    width: 100%;
+    height: auto;
+}
+
+.row {
+    display: flex;
+    justify-content: space-between;
+    width: 80%;
+    height: auto;
+}
+
+/************************ END CONTAINER FOR IMAGES - first container ************************/
+
+
+/************************ START CONTAINER FOR TEXT - second container ************************/
+
+.container-2 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    width: 50%;
+}
+
+.text-container-main {
+    width: 70%;
+}
+
+.text-subcontainer h1 {
+    font-size: 2.5rem;
+    letter-spacing: .04rem;
+}
+
+.text-subcontainer p {
+    letter-spacing: 0.03rem;
+}
+
+.text-subcontainer h1, p {
+    margin-bottom: 2rem;
+}
+
+.text-subcontainer h3 {
+    text-transform: uppercase;
+    font-size: 1rem;
+    letter-spacing: 0.12rem;
+    margin-bottom: 1rem;
+    color: hsl(26, 100%, 55%);
+}
+
+.text-subcontainer p {
+    color: hsl(219, 9%, 45%);
+}
+
+.price-discounted {
+    display: flex;
+    align-items: flex-end;
+    flex-wrap: nowrap;
+    margin-bottom: 1rem;
+}
+
+.discounted-price {
+    font-size: 1.7rem;
+    font-weight: 700;
+    margin-right: 1rem;
+}
+
+.discount-percentage {
+    color: hsl(26, 100%, 55%);
+    border-radius: .4rem;
+    font-size: .7rem;
+    font-weight: 700;
+    background-color: hsl(25, 100%, 94%);
+    padding: .5rem;
+    text-align: center;
+}
+
+.rrp {
+    color: hsl(220, 14%, 75%);
+    text-decoration: line-through;
+}
+
+.rrp-mobile {
+    display: none;
+}
+
+
+/*** Start cart-controls and add to cart button ***/
+
+button { /*buttons - aligning the + and - signs in the cart-control and add to cart text*/
+    width: 11rem;
+    height: 2.5rem;
+    border-radius: .5rem;
+    outline: none;
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    align-self: center;
+}
+
+.cart-controls { /*container of add to cart button & controls*/
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-self: flex-start;
+}
+
+.cart-quantity-controls {
+    display: flex;
+    justify-content: center;
+    background-color: hsl(220, 14%, 75%);
+    border-radius: .5rem;
+    height: 3rem;
+    width: 12rem;
+    align-self: center;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+button.cart-control {
+    background-color: hsl(220, 14%, 75%);
+    outline: none;
+    border: none;
+    width: 2.5rem;
+}
+
+input.quantity-input {
+    height: 3rem;
+    width: 3.5rem;
+    outline: none;
+    border: none;
+    background-color: hsl(220, 14%, 75%);
+}
+
+input[type="number"] {
+    -webkit-appearance: textfield;
+    -moz-appearance: textfield;
+    appearance: textfield;
+    text-align: center;
+}
+
+input[type=number]::-webkit-inner-spin-button, /*hiding the spin buttons */
+input[type=number]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+}
+
+button.add-item {
+    background-color: hsl(26, 100%, 55%);
+    margin: 2rem 0;
+    height: 3rem;
+    width: 16rem;
+    color: #fff;
+    font-size: 1rem;
+    font-weight: 700;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+.add-item img { /*cart icon on the add to cart btn*/
+    height: 1rem;
+    width: auto;
+    margin-right: .8rem;
+    vertical-align: text-top;
+}
+
+/*** End cart-controls and add to cart button ***/
+
+/***************************START SHOPPING CART - active (filled)***********************/
+main {
+    position: relative;
+}
+
+.shopping-cart-content { /*cart container*/
+    border-radius: 1rem;
+    width: 25rem;
+    padding: 2rem;
+    display: none;
+    position: absolute;
+    z-index: 10;
+    background-color: #fff;
+    right: 5rem;
+    top: -5rem;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+#close-cart {
+    position: absolute;
+    right: 2rem;
+    top: 2rem;
+    font-size: 1.2rem;
+    color: hsl(219, 9%, 45%);
+    cursor: pointer;
+}
+
+.shopping-cart-content.active {
+    display: block;
+}
+
+hr.cart-h-line {
+    width: 100%;
+    margin: 1rem 0;
+}
+
+.default-text-empty {
+    display: block;
+    text-align: center;
+    margin: 5rem 0;
+    color: hsl(219, 9%, 45%);
+    font-weight: 700;
+}
+
+.cart-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 1rem 0;
+    color: hsl(219, 9%, 45%);
+}
+
+.cart-item-name {
+    margin-bottom: .3rem;
+    width: 100%;
+}
+
+.cart-item-name br { /*inside the cart br is not needed*/
+    display: none;
+}
+
+.cart-item-image {
+    width: 3rem;
+    height: auto;
+    border-radius: .3rem;
+}
+
+.cart-total {
+    font-weight: 700;
+}
+
+.remove-btn {
+    width: 2rem;
+    background-color: #fff;
+    outline: none;
+    border: none;
+}
+
+.checkout-btn {
+    background-color: hsl(26, 100%, 55%);
+    width: 100%;
+    font-size: 1rem;
+    font-weight: 700;
+    color: #fff;
+    letter-spacing: .03rem;
+}
+
+/***************************END SHOPPING CART - active (filled) ***********************/
+
+
+/*************************** START LIGHTBOX - w3schools ***********************/
+
+.mobile-images {
+    display: none;
+}
+
+.thumbnail-img-container { /*Thumbnai image container lightbox*/
+    display: flex;
+    justify-content: space-around;
+    margin-top: 1rem;
+}
+  
+  /* Create four equal columns that floats next to eachother */
+  .column { /*thumbnail images*/
+    float: left;
+    display: flex;
+    justify-content: center;
+    width: 20%;
+}
+
+.column img {
+    width: 100%;
+    border-radius: 1rem;
+}
+
+.column:first-child {
+    opacity: 70%;
+}
+
+.column img:hover  {
+    border-radius: 1rem;
+    border: hsl(26, 100%, 55%) 3px solid;
+    opacity: 70%;
+}
+  
+  /* The Modal (background) */
+  .modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    padding-top: 8rem;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.8);
+}
+  
+  /* Modal Content */ /*container of main image and thumbnails*/
+  .modal-content { 
+    position: relative;
+    margin: auto;
+    padding: 0;
+    width: 30%;
+    max-width: 1200px;
+  }
+
+  .mySlides img {
+    width: 100%;
+    border-radius: 1.3rem;
+  }
+  
+  /* The Close Button */
+  .close {
+    color: #fff;
+    position: absolute;
+    top: 8%;
+    right: 35%;
+    font-size: 2.8rem;
+    font-weight: bold;
+  }
+  
+  .close:hover,
+  .close:focus {
+    color: hsl(26, 100%, 55%);
+    text-decoration: none;
+    cursor: pointer;
+    transition: .6s ease;
+  }
+  
+  /* Hide the slides by default */
+  .mySlides {
+    display: none;
+  }
+
+  .prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 45%;
+    transform: translateY(-90%);
+    width: auto;
+    padding: 1rem;
+    color: hsl(219, 9%, 45%);
+    font-size: 1.4rem;
+    border-radius: 50%;
+    user-select: none;
+    -webkit-user-select: none;
+    background-color: #fff;
+    width: 12%;
+    text-align: center;
+  }
+
+  .prev:hover, .next:hover {
+    color: hsl(26, 100%, 55%);
+    transition: ease 0.6s;
+  }
+  
+  /* Position the "next button" to the right */
+  .next {
+    right: -5%;
+  }
+  
+  .prev {
+    left: -5%;  
+  }
+  
+  /* Number text (1/3 etc)*/
+.numbertext {
+    color: #f2f2f2;
+    font-size: 12px;
+    padding: 8px 12px;
+    position: absolute;
+    top: 0;
+}
+
+  
+img.demo { /*thumbnails when we open the modal*/
+    opacity: 1;
+    transition: .6s ease;
+}
+  
+  
+.demo.active, /*acive state of image thumbnails*/
+.demo:hover {
+    filter: brightness(.7);
+    opacity: 90%;
+}
+  
+img.hover-shadow {
+    transition: 0.3s;
+}
+  
+.hover-shadow:hover .demo:hover {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+/************************** End Lightbox *******************************/
+.wrapper {
+    margin-bottom: 2rem;
+}
+
+footer {
+    margin-top: auto;
+    margin-bottom: 0;
+    height: 3rem;
+    background-color: hsl(25, 100%, 94%);
+    font-size: 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/*************************** START HAMBURGER MENU DESKTOP ***************************/
+
+.hamburger{
+    display: none;
+    cursor: pointer;
+    margin-right: 2rem;
+}
+
+.bar {
+    display: block;
+    width: 25px;
+    height: 3px;
+    margin: 5px 0;
+    transition: all 0.3s ease;
+    background-color: hsl(219, 9%, 45%);
+}
+
+/*************************** END HAMBURGER MENU DESKTOP ***************************/
+
+
+
+/**************** Tablet design ****************/
+  @media only screen and (max-width: 1024px) {
+    .logo-container {
+        width: 30%;
+        height: auto;
+        margin: 0;
+        margin-right: 1rem;
+        margin-left: 3rem;
+    }
+
+    .navlinks { /*contains the navmenu text*/
+        width: 90%;
+    }
+
+    .nav-icons-container { /*shopping cart icon and profile image*/
+        justify-content: space-between;
+        padding-left: 8rem;
+        margin-right: 5rem;
+    }
+
+    .product-img-container {
+        width: 100%;
+        align-items: center;
+        margin-right: 0rem;
+    }
+
+    .container-img-main { 
+        justify-content: center;
+    }
+    
+     div img.main-img {
+        width: 85%;
+        margin-bottom: 1.2rem;
+    }
+    
+    .row {
+        width: 85%;
+    }
+
+    .text-container-main, .container-2 {
+        width: 100%;
+        padding: 0 1rem;
+    }
+
+    .text-container-main h1 {
+        font-size: 2rem;
+    }
+
+    .text-container-main br {
+        display: none;
+    }
+
+    .cart-controls { /*container of add to cart button & controls*/
+        width: 100%;
+    }
+
+    .cart-quantity-controls {
+        width: 9rem;
+    }
+
+    button.add-item {
+        width: 9rem;
+    }
+
+    .add-item img { /*cart icon on the add to cart btn*/
+        height: 1rem;
+        width: auto;
+        margin-right: .5rem;
+        vertical-align: text-top;
+    }
+
+}
+
+/**************** Mobile design ****************/
+
+  @media only screen and (max-width: 700px) {
+
+    /*START HAMBURGER MENU*/
+
+    .navbar {
+        display: flex;
+        justify-content: space-around;
+        padding: 0;
+        padding-bottom: .7rem;
+    }
+
+    header hr {
+        display: none;
+    }
+
+    .hamburger {
+        display: block;
+        align-self: center;
+        margin: 0;
+        order: 1;
+    }
+
+    .logo-container {
+        width: 35%;
+        height: auto;
+        order: 2;
+        margin: 0;
+        margin-left: -2.2rem;
+    }
+
+    .logo-img {
+        margin: 0;
+    }
+
+    .nav-icons-container {
+        order: 3;
+        padding: 0;
+        margin: 0;
+    }
+
+    /*start animation which turns bar into an X*/
+    .hamburger.active .bar:nth-child(2) {
+        opacity: 0;
+    }
+
+    .hamburger.active .bar:nth-child(1) {
+        transform: translateY(8px) rotate(45deg);
+    }
+
+    .hamburger.active .bar:nth-child(3) {
+        transform: translateY(-8px) rotate(-45deg);
+    }
+
+    /*end animation which turns bar into an X*/
+
+    .navlinks { 
+        position: fixed;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+        left: -100%; 
+        top: 0;
+        margin-top: 0; 
+        gap: 1rem;
+        width: 100%;
+        transition: all .7s;
+    }
+
+    .nav-item {
+        margin-left: 1.5rem;
+        color: hsl(0, 0%, 0%);
+    }
+
+
+
+    .navlinks li a {
+        color: hsl(0, 0%, 0%);
+        font-weight: 700;
+    }
+
+    .navlinks.active { 
+        left: 0;
+        position: fixed;
+        top: 0; 
+        max-width: 50%;
+        background-color: #fff;
+        height: 100%;
+        font-weight: 700;
+        transition: all .7s;
+        z-index: 5;
+        opacity: 1!important;
+    }
+
+    .navlinks a {
+        display: block;
+    }
+
+    .close-bar {
+        display: block;
+        align-self: flex-start;
+        margin-top: 1rem;
+        margin-bottom: 2rem;
+        margin-left: 1.5rem;
+        font-size: 1.5rem;
+        color: hsl(220, 14%, 75%);
+    }
+
+/*END HAMBURGER */
+
+    /*adds dark background when hamburger menu is active*/
+    body.active, .main-img.active {
+        background-color: rgba(0, 0, 0, 0.8);
+        opacity: 75%; /* the hamburger menu inherits the opacity as well */
+        transition: all .7s;
+    }
+
+    body, .main-img {
+        transition: all .7s;
+        transition-delay: .1s;
+    }
+
+    .navlinks.active {
+        background-color: #fff;
+    }
+
+    
+    .wrapper {
+        flex-direction: column;
+    }
+
+    .row {
+        display: none;
+    }
+
+    .product-img-container {
+        width: 100%;
+        align-items: center;
+        margin-right: 0rem;
+    }
+
+    .container-img-main { /*needed to shift the main image to the center*/
+        justify-content: center;
+        margin-bottom: 1rem;
+    }
+
+    .container-img-main img, .container-img-main {
+        width: 100%;
+    }
+
+    .container-2, .text-container-main {
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+    }
+
+    .text-subcontainer h1 {
+        font-size: 1.8rem;
+        letter-spacing: .04rem;
+    }
+
+    .text-subcontainer h1 br {
+        display: none;
+    }
+
+    .price-discounted {
+        display: flex;
+    }
+
+    .rrp {
+        display: none;
+    }
+    
+    .rrp-mobile {
+        display: block;
+        color: hsl(220, 14%, 75%);
+        text-decoration: line-through;
+        margin-left: auto;
+        align-self: center;
+    }
+
+    .cart-controls {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .cart-quantity-controls {
+        height: 3.5rem;
+        width: 15rem;
+        width: 100%;
+        justify-content: space-between;
+        padding: 0 1rem;
+    }
+
+    button.add-item {
+        margin: 1.7rem 0;
+        height: 4rem;
+        width: 100%;
+    }
+
+    /************* Start shopping cart container ***************/
+
+    .shopping-cart-content { 
+        width: 95%;
+        left: 0; 
+        right: 0;
+        margin-left: auto; 
+        margin-right: auto;
+        top: -2rem;
+        transform: translateY(2.5rem);
+    }
+
+    /************* End shopping cart container ***************/
+
+
+    /*************************** START SWIPER.JS MOBILE IMAGE SLIDER ***********************/
+
+    .modal, .main-img, .hover-shadow, img.demo, .mySlidescarousel-button, .prev, .next {
+        display: none;
+    }
+
+    .mobile-images {
+        display: block;
+    }
+
+    .swiper {
+        width: 100%;
+        height: auto; /*auto is better than applying a fixed width*/
+    }
+
+    .swiper img {
+        width: 100%;
+        height: auto;
+    }
+
+    .swiper-button-prev, .swiper-button-next {
+        color: hsl(219, 9%, 45%);
+        background-color: #fff;
+        width: auto;
+        border: 0px solid #fff;
+        border-radius: 50%;
+        padding: 1rem;
+    }
+
+    .swiper-button-prev::after, .swiper-button-next::after {
+        content: "";
+    }
+
+    /*************************** END SWIPER.JS MOBILE IMAGE SLIDER ***********************/
+}
+
+
+@media only screen and (max-width: 375px) {
+    .cart-item-name {
+        margin-bottom: .3rem;
+        font-size: .9rem;
+    }
+
+}
+
+@media only screen and (max-width: 321px) {
+    .cart-item-name {
+        margin-bottom: .3rem;
+        font-size: .71rem;
+    }
+
+    .cart-item-name br { /*inside the cart br is not needed*/
+        display: none;
+    }
+
+    .swiper-button-prev, .swiper-button-next {
+        transform: translateY(-50%);
+    }
+
+    .text-container-main, .container-2 {
+        width: 100%;
+        padding: 1rem;
+    }
+
+    .text-subcontainer h1 {
+        font-size: 1.7rem;
+    }
+
+    .text-subcontainer p {
+        font-size: 1rem;
+    }
+
+}
+
+@media only screen and (min-width: 824px) and (max-width: 1024px) {
+    .cart-controls {
+        align-items: center;
+    }
+    
+    .cart-quantity-controls {
+        width: 14rem;
+        margin-right: 1rem;
+    }
+    
+    button.add-item {   
+        width: 14rem;
+    }
+
+}

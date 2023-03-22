@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"/>
+  <script src="swiper.js" async></script>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+  <link rel="stylesheet" href="style.css">
+  <script src="app.js" async></script>
+  <script src="lightbox.js" async></script>
+  <script src="hamburger.js" async></script>
+  <title>Frontend Mentor | E-commerce product page</title>
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    .attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+  </style>
+</head>
+<body id="body">
+  <header>
+    <nav class="navbar">
+      <div class="logo-container">
+        <img class="logo-img" src="./images/logo.svg" alt="logo">
+      </div>
+      <ul class="navlinks">
+        <li class="close-bar"><a href="#">X</a></li>
+        <li class="navlink"><a class="nav-item" href="#">Collections</a></li>
+        <li class="navlink"><a class="nav-item" href="#">Men</a></li>
+        <li class="navlink"><a class="nav-item" href="#">Women</a></li>
+        <li class="navlink"><a class="nav-item" href="#">About</a></li>
+        <li class="navlink"><a class="nav-item" href="#">Contact</a></li>
+      </ul>
+      <div class="hamburger">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+      </div>
+      <div class="nav-icons-container">
+        <div class="cart">
+          <span class="icon-cart-qty"></span>
+          <img class="cart-icon" src="./images/icon-cart.svg" alt="cart icon">
+        </div>
+        <div class="profile-img-wrapper">
+          <img src="./images/image-avatar.png" alt="profile picture icon">
+        </div>
+      </div>
+    </nav>
+    <hr>
+  </header>
+  <main>
+    <div class="shopping-cart-content"> <!--cart-items in the tutorial maybe put this into the navbar and set to hidden-->
+      <strong>Cart</strong>
+      <span id="close-cart"><strong>X</strong></span>
+      <hr class="cart-h-line">
+      <span class="default-text-empty">Your cart is empty</span> <!--add it with JS then with createelement in an if else statement -->
+      <div class="cart-items-container"> <!--this is when we have an item in the cart, must be empty in the end-->
+        <span class="cart-quantity" style= "display: none;"></span> <!--if I delete this then the JS doesn´t work-->
+        <!--<button class="checkout-btn" type="button">Checkout</button>-->
+      </div>
+      <!--<button class="checkout-btn" type="button">Checkout</button>--> <!-- I need to hide it when the cart is empty and hide it also when we click on remove button-->
+    </div>
+    <div class="wrapper">
+      <section class="product-img-container"> <!--first main container-->
+        <div class="mobile-images swiper" aria-label="Product photos"> <!--swiper.js start-->
+          <div class="swiper-wrapper" effect="fade" space-between="30">
+            <!-- Slides -->
+            <div class="swiper-slide">
+              <img src="./images/image-product-1.jpg" alt="white sneaker">
+            </div>
+            <div class="swiper-slide">
+              <img src="./images/image-product-2.jpg" alt="white sneaker">
+            </div>
+            <div class="swiper-slide">
+              <img src="./images/image-product-3.jpg" alt="white sneaker">
+            </div>
+            <div class="swiper-slide">
+              <img src="./images/image-product-4.jpg" alt="white sneaker">
+            </div>
+          </div>
+          <div class="swiper-button-prev">&#10094;</div>
+          <div class="swiper-button-next">&#10095;</div>
+        </div>
+        <div class="container-img-main" aria-label="Product photos"> <!--start lightbox - thumbnails-->
+          <img class="main-img" src="./images/image-product-1.jpg" alt="white sneaker" onclick="openModal();currentSlide(1)">
+        </div> 
+        <div class="container-img-thumbnails row"> <!--Images used to open the lightbox-->
+          <div class="column">
+            <img src="./images/image-product-1-thumbnail.jpg" alt="white sneaker image" onclick="openModal();currentSlide(1)" class="hover-shadow">
+          </div>
+          <div class="column">
+            <img src="./images/image-product-2-thumbnail.jpg" alt="white sneaker image" onclick="openModal();currentSlide(2)" class="hover-shadow">
+          </div>
+          <div class="column">
+            <img src="./images/image-product-3-thumbnail.jpg" alt="white sneaker image" onclick="openModal();currentSlide(3)" class="hover-shadow">
+          </div>
+          <div class="column">
+            <img src="./images/image-product-4-thumbnail.jpg" alt="white sneaker image" onclick="openModal();currentSlide(4)" class="hover-shadow">
+          </div>
+        </div>
+        <!--The modal / lightbox-->
+        <div class="modal" id="myModal">
+          <span class="close cursor" onclick="closeModal()">&times;</span>
+          <div class="modal-content">
+            <div class="mySlides">
+              <div class="numbertext">1 / 4</div>
+              <img src="./images/image-product-1.jpg" alt="white sneaker image">
+            </div>
+            <div class="mySlides">
+              <div class="numbertext">2 / 4</div>
+              <img src="./images/image-product-2.jpg" alt="white sneaker image">
+            </div>
+            <div class="mySlides">
+              <div class="numbertext">3 / 4</div>
+              <img src="./images/image-product-3.jpg" alt="white sneaker image">
+            </div>
+            <div class="mySlides">
+              <div class="numbertext">4 / 4</div>
+              <img src="./images/image-product-4.jpg" alt="white sneaker image">
+            </div>
+            <!-- Next / previous controls -->
+            <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+            <a class="next" onclick="plusSlides(1)">&#10095;</a>
+            <!--Thumbnail image controls-->
+            <div class="thumbnail-img-container">
+              <div class="column">
+                <img src="./images/image-product-1-thumbnail.jpg" alt="white sneaker" class="demo" onclick="currentSlide(1)">
+              </div>
+              <div class="column">
+                <img src="./images/image-product-2-thumbnail.jpg" alt="white sneaker" class="demo" onclick="currentSlide(2)">
+              </div>
+              <div class="column">
+                <img src="./images/image-product-3-thumbnail.jpg" alt="white sneaker" class="demo" onclick="currentSlide(3)">
+              </div>
+              <div class="column">
+                <img src="./images/image-product-4-thumbnail.jpg" alt="white sneaker" class="demo" onclick="currentSlide(4)">
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="container-2"> <!--second main container for text--> <!--maybe get the elements from here-->
+        <div class="text-container-main">
+          <div class="text-subcontainer">
+            <h3>Sneaker Company</h3>
+            <h1 class="title">Fall Limited Edition <br>Sneakers</h1>
+            <p>These low-profile sneakers are your perfect casual wear companion. Featuring a durable rubber outer sole, they’ll withstand everything the weather can offer.</p>
+          </div>
+          <div class="price-container">
+            <!--the image is just a test to add it to the container--> <!--if there were several products, then the wrong image would be chosen cause iimages are in separate containers-->
+            <img class="test-image" src="./images/image-product-1-thumbnail.jpg" alt="" class="product-image" style="display: none;"> <!--add a class active style display block and make it small-->
+            <div class="price-discounted">
+              <span class="discounted-price">$125</span>
+              <span class="discount-percentage">50%</span>
+              <span class="rrp-mobile">$250</span>
+            </div>
+            <div class="rrp">$250</div>
+          </div>
+          <div class="cart-controls"> <!--other version from here-->
+            <div class="cart-quantity-controls">
+              <button class="cart-control" id="quantity" onclick="this.parentNode.querySelector('input[type=number]').stepDown()"><img style="height: .8rem; width: 1.3rem;" class="cart-control-icon" src="./images/icon-minus.svg" alt="minus icon"></button>
+              <input id="quantity-input-id" class="quantity-input" min="1" placeholder="1" name="quantity" value="0" type="number">
+              <button class="cart-control" id="quantity" onclick="this.parentNode.querySelector('input[type=number]').stepUp()" class="plus"><img style="height: 1.5rem; width: 1.3rem" class="cart-control-icon" src="./images/icon-plus.svg" alt="plus icon"></button>
+            </div>
+            <button class="add-item" type="button"><img src="./images/icon-cart.svg" alt="cart icon">Add to cart</button>
+          </div>
+        </div>
+      </section>
+    </div>
+  </main>
+  <footer>
+    <div class="attribution">
+      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+      Coded by <a href="#">Andrea Hideg</a>.
+    </div>
+  </footer>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-element-bundle.min.js"></script>
+</body>
+</html>
