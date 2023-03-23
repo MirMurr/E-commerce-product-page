@@ -1,3 +1,5 @@
+//Copyright (c) Vladimir Kharlampidi
+
 const swiper = new Swiper('.swiper', {
     // Optional parameters
     effect: 'fade',
