@@ -64,19 +64,19 @@
     <div class="wrapper">
       <section class="product-img-container"> <!--first main container-->
         <div class="mobile-images swiper" aria-label="Product photos"> <!--swiper.js start-->
-          <div class="swiper-wrapper" effect="fade" space-between="30">
+          <div class="swiper-wrapper" space-between="30">
             <!-- Slides -->
             <div class="swiper-slide">
-              <img src="./images/image-product-1.jpg" alt="white sneaker">
+              <img src="./images/image-product-1.jpg" alt="white sneaker" class="swiper">
             </div>
             <div class="swiper-slide">
-              <img src="./images/image-product-2.jpg" alt="white sneaker">
+              <img src="./images/image-product-2.jpg" alt="white sneaker" class="swiper">
             </div>
             <div class="swiper-slide">
-              <img src="./images/image-product-3.jpg" alt="white sneaker">
+              <img src="./images/image-product-3.jpg" alt="white sneaker" class="swiper">
             </div>
             <div class="swiper-slide">
-              <img src="./images/image-product-4.jpg" alt="white sneaker">
+              <img src="./images/image-product-4.jpg" alt="white sneaker" class="swiper">
             </div>
           </div>
           <div class="swiper-button-prev">&#10094;</div>
@@ -159,9 +159,9 @@
           </div>
           <div class="cart-controls"> <!--other version from here-->
             <div class="cart-quantity-controls">
-              <button class="cart-control" id="quantity" onclick="this.parentNode.querySelector('input[type=number]').stepDown()"><img style="height: .8rem; width: 1.3rem;" class="cart-control-icon" src="./images/icon-minus.svg" alt="minus icon"></button>
+              <button class="cart-control" onclick="this.parentNode.querySelector('input[type=number]').stepDown()"><img style="height: .8rem; width: 1.3rem;" class="cart-control-icon" src="./images/icon-minus.svg" alt="minus icon"></button>
               <input id="quantity-input-id" class="quantity-input" min="1" placeholder="1" name="quantity" value="0" type="number">
-              <button class="cart-control" id="quantity" onclick="this.parentNode.querySelector('input[type=number]').stepUp()" class="plus"><img style="height: 1.5rem; width: 1.3rem" class="cart-control-icon" src="./images/icon-plus.svg" alt="plus icon"></button>
+              <button class="cart-control" onclick="this.parentNode.querySelector('input[type=number]').stepUp()"><img style="height: 1.5rem; width: 1.3rem" class="cart-control-icon" src="./images/icon-plus.svg" alt="plus icon"></button>
             </div>
             <button class="add-item" type="button"><img src="./images/icon-cart.svg" alt="cart icon">Add to cart</button>
           </div>
