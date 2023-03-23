@@ -62,8 +62,8 @@
       <!--<button class="checkout-btn" type="button">Checkout</button>--> <!-- I need to hide it when the cart is empty and hide it also when we click on remove button-->
     </div>
     <div class="wrapper">
-      <section class="product-img-container"> <!--first main container-->
-        <div class="mobile-images swiper" aria-label="Product photos"> <!--swiper.js start-->
+      <section class="product-img-container" aria-label="Product photos"> <!--first main container-->
+        <div class="mobile-images swiper"> <!--swiper.js start-->
           <div class="swiper-wrapper" space-between="30">
             <!-- Slides -->
             <div class="swiper-slide">
@@ -82,7 +82,7 @@
           <div class="swiper-button-prev">&#10094;</div>
           <div class="swiper-button-next">&#10095;</div>
         </div>
-        <div class="container-img-main" aria-label="Product photos"> <!--start lightbox - thumbnails-->
+        <div class="container-img-main"> <!--start lightbox - thumbnails-->
           <img class="main-img" src="./images/image-product-1.jpg" alt="white sneaker" onclick="openModal();currentSlide(1)">
         </div> 
         <div class="container-img-thumbnails row"> <!--Images used to open the lightbox-->
